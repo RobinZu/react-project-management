@@ -12,7 +12,11 @@ function ProjectListPage() {
   const getAllProjects = () => {
     axios
       .get(`${API_URL}/projects?_embed=tasks`)
-      .then((response) => setProjects(response.data))
+      .then((response) => {
+        const projectsFromApi = response.data;
+        const newList = projectsFromApi.reverse();
+        setProjects(newList);
+      })
       .catch((error) => console.log("Error getting projects from the API...", error));
   };
 
