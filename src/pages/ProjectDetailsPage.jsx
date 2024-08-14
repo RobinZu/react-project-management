@@ -50,6 +50,11 @@ function ProjectDetailsPage() {
             <Link to="/projects">
                 <button>Back to projects</button>
             </Link>
+
+            <Link to={`/projects/edit/${projectId}`}>
+                <button>Edit Project</button>
+            </Link>
+
         </div>
     );
 }
