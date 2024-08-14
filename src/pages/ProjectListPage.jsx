@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
 
-const API_URL = "https://project-management-api-4641927fee65.herokuapp.com";
+import { API_URL } from "../config/api";
 
 
 function ProjectListPage() {
